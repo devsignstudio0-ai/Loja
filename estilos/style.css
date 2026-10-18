@@ -1,0 +1,12 @@
+@charset "utf-8";
+
+:root {
+    primeiracor:#FF1493;
+    segundacor:#111111;
+    fundo:#FFFFFF;
+}
+
+body {
+    background-color: lightgray;
+    color: darkblue;
+}
