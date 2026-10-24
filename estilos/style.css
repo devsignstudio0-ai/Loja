@@ -4,7 +4,8 @@
     --cor--fundo:#e11392;
     --cor--letras:#FFFFFF;
     --cor--fundoinverso:#ffffff;
-    --cor-letrainverso:#111111;
+    --cor-letrainverso:#e11392;
+    --cor-escura:#111;
 }
 * {
     margin: 0;
@@ -15,7 +16,7 @@
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     line-height: 1.5em;
-    background-color:#ffb4e2;
+    background-color:var(--cor--fundo);
     color:var(--cor--letras);
 }
 header{
@@ -34,7 +35,7 @@ nav#menu ul{
 
 nav#menu a {
     text-decoration: none;
-    color: #e11392;
+    color:var(--cor--fundo);
     font-weight: 600;
     padding: 12px 15px;
     border-radius: 5px;
@@ -42,39 +43,45 @@ nav#menu a {
 }
 
 nav#menu a:hover {
-    background-color: var(--cor--fundo);
+    background-color:var(--cor--fundo);
     color:var(--cor--letras);
 }
 
 main {
+    margin-top: 10px;
     display: grid;
-    grid-template-columns: 1fr 90vw auto;
-    gap: 20px;
-    margin-top: 20px;
+    grid-template-columns: auto 90% auto;
 }
 
 section#ficha {
-    background-color: #e11392;
+    background-color: var(--cor--letras);
     padding: 20px;
+    border-radius: 5px;
     grid-column: 2;
 }
 
-section#ficha img.foto {
+img.foto {
     width: 200px;
-    aspect-ratio: 1/1;
+    aspect-ratio:1/1;
     object-fit: cover;
+    overflow: hidden;
     border-radius: 50%;
-    border: var(--cor--letras) solid 5px;
-    outline:#ffb4e2 solid 5px;
+    border: 5px solid white;
+    outline: 5px solid #e11392;
     display: block;
     margin: auto;
-    margin-bottom: 15px;
+    margin-top: 15px;
 }
 
 section#ficha h1 {
-    color: var(--cor--letras);
+    color: var(--cor-escura);
     margin: 15px 0;
     font-size: 1.5em;
+    text-align: left;
+}
+
+section#ficha p {
+    color: var(--cor-escura);
     text-align: left;
 }
 
@@ -82,97 +89,15 @@ div#social {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1em;
-    gap: 1.6em;
-    margin-top: 1em;
+    font-size: 1.6em;
+    gap: 1em;
+    margin: 15px;
 }
-
 div#social a {
-    color: var(--cor--letras);
-    transition: 0.5s;
-
+    color: var(--cor--fundo);
+    transition: color 1s;
 }
 
 div#social a:hover {
-    color: var(--cor-letrainverso);
-}
-
-section#detalhes {
-    grid-column: 2;
-}
-
-article {
-    background-color: var(--cor--fundo);
-    padding: 20px;
-    margin: 20px;
-    border-radius: 8px;
-}
-
-article h2 {
-    
-}
-#video {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 25px;
-    text-align: center;
-}
-#video video {
-    display: block;
-    width: 100%;
-    max-width: 100vh;
-    height: auto;
-    margin: 0 auto;
-    border-radius: 8px;
-}
-
-article#video {
-    position: relative;
-    width: 100%;
-    margin: auto;
-    aspect-ratio: 10/5;
-    border-radius: 5px solid var(--cor--fundoinverso);
-}
-
-article#video source{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 1;
-}
-
-#fotos h2 {
-    color: var(--pink);
-    margin-bottom: 20px;
-}
-.rolagem-fotos {
-    display: flex;
-    gap: 15px;
-
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-
-    padding-bottom: 15px;
-}
-.rolagem-fotos img {
-    flex: 0 0 220px;
-    width: 220px;
-    height: 280px;
-
-    object-fit: cover;
-    border-radius: 12px;
-
-    scroll-snap-align: start;
-}
-
-/* Personaliza a barra de rolagem */
-.rolagem-fotos::-webkit-scrollbar {
-    height: 6px;
-}
-
-.rolagem-fotos::-webkit-scrollbar-thumb {
-    background: var(--pink);
-    border-radius: 10px;
+    color: var(--cor-escura);
 }
