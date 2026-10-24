@@ -26,6 +26,14 @@ header{
     display: flex;
     justify-content: flex-end;
     align-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+    
+    box-sizing: border-box;
 }
 nav#menu ul{
     list-style: none;
@@ -51,6 +59,9 @@ main {
     margin-top: 10px;
     display: grid;
     grid-template-columns: auto 90% auto;
+}
+section{
+    margin-bottom: 10px;
 }
 
 section#ficha {
@@ -100,4 +111,334 @@ div#social a {
 
 div#social a:hover {
     color: var(--cor-escura);
+}
+
+section#detalhes {
+    grid-column: 2;
+}
+
+article {
+    background-color:var(--cor--fundoinverso) ;
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+article#video h2{
+    color: #111;
+    padding-bottom: 10px;
+    margin: auto;
+}
+
+#video {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#video-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+#video-container video {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+#produtos-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.produto {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    transition: transform 0.3s ease;
+}
+
+.produto:hover {
+    transform: translateY(-8px);
+}
+
+.produto img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    display: block;
+}
+article#produtos h2 {
+    color: #111;
+    text-align: center;
+    padding-top: 10px;
+}
+
+@media (max-width: 700px) {
+    #produtos-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 15px;
+    }
+
+    .produto img {
+        height: 220px;
+    }
+}
+
+@media (max-width: 450px) {
+    #produtos-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+article#contato {
+    color: #111;
+}
+
+
+/* SEÇÃO DE CONTATO */
+#contato {
+    padding: 60px 20px;
+    background: #fff5fa;
+}
+
+/* TÍTULO */
+#contato h2 {
+    text-align: center;
+    color: #e6007e;
+    font-size: 30px;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+#contato h2 i {
+    margin-right: 10px;
+}
+
+/* FORMULÁRIO */
+#formulario {
+    max-width: 550px;
+    margin: 0 auto;
+    padding: 35px;
+    background: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(230, 0, 126, 0.12);
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* RÓTULOS */
+#formulario label {
+    color: #333333;
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 8px;
+}
+
+/* CAMPOS DE TEXTO */
+#formulario input,
+#formulario textarea {
+    width: 100%;
+    padding: 13px 15px;
+    border: 1px solid #e5c5d6;
+    border-radius: 10px;
+    background: #fffafd;
+    color: #333333;
+    font-size: 15px;
+    font-family: inherit;
+
+    box-sizing: border-box;
+    outline: none;
+    transition: 0.3s ease;
+}
+
+/* EFEITO AO CLICAR NOS CAMPOS */
+#formulario input:focus,
+#formulario textarea:focus {
+    border-color: #e6007e;
+    box-shadow: 0 0 0 3px rgba(230, 0, 126, 0.12);
+    background: #ffffff;
+}
+
+/* ÁREA DA MENSAGEM */
+#formulario textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* BOTÃO ENVIAR */
+#formulario button {
+    margin-top: 15px;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    background: #e6007e;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+/* EFEITO DO BOTÃO */
+#formulario button:hover {
+    background: #bd0067;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(230, 0, 126, 0.25);
+}
+
+/* CELULARES */
+@media (max-width: 600px) {
+    #contato {
+        padding: 40px 15px;
+    }
+
+    #contato h2 {
+        font-size: 24px;
+    }
+
+    #formulario {
+        padding: 25px 20px;
+    }
+}
+
+
+/* RODAPÉ */
+#rodape {
+    background: var(--cor--fundo);
+    color: #ffffff;
+    padding: 45px 7% 0;
+}
+
+/* ORGANIZAÇÃO DAS COLUNAS */
+.rodape-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 40px;
+    padding-bottom: 35px;
+}
+
+/* LOGO E DESCRIÇÃO */
+.rodape-logo h2 {
+    font-size: 27px;
+    margin: 0 0 15px;
+    font-weight: bold;
+}
+
+.rodape-logo p {
+    max-width: 350px;
+    line-height: 1.7;
+    color: #ffe4f1;
+}
+
+/* TÍTULOS */
+.rodape-links h3,
+.rodape-social h3 {
+    font-size: 18px;
+    margin: 0 0 18px;
+}
+
+/* LINKS */
+.rodape-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.rodape-links a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-bottom: 12px;
+    transition: 0.3s;
+}
+
+.rodape-links a:hover {
+    color: #ffd1e8;
+    padding-left: 5px;
+}
+
+/* REDES SOCIAIS */
+.social-icons {
+    display: flex;
+    gap: 12px;
+}
+
+.social-icons a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 42px;
+    height: 42px;
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    background: #ffffff;
+    color: #e6007e;
+    transform: translateY(-4px);
+}
+
+/* FAIXA INFERIOR */
+.rodape-final {
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 18px 0;
+    text-align: center;
+    font-size: 13px;
+    color: #ffe4f1;
+}
+
+.rodape-final p {
+    margin: 6px 0;
+}
+
+.rodape-final .fa-heart {
+    color: #ffffff;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+    .rodape-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px 20px;
+    }
+
+    .rodape-logo {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 480px) {
+    #rodape {
+        padding: 35px 20px 0;
+    }
+
+    .rodape-container {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .rodape-logo {
+        grid-column: auto;
+    }
+
+    .rodape-final {
+        font-size: 12px;
+    }
 }
