@@ -51,6 +51,7 @@ main {
     margin-top: 10px;
     display: grid;
     grid-template-columns: auto 90% auto;
+    grid-template-rows: 5;
 }
 section{
     margin-bottom: 10px;
@@ -148,4 +149,45 @@ article {
     height: 100%;
     border: none;
     display: block;
+}
+
+#skill-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+.infor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nome {
+    font-weight: bold;
+    color: var(--cor--letras);
+}
+
+.porcent {
+    font-weight: bold;
+    color: var(--cor--icons);
+}
+
+.barra  {
+    width: 100%;
+    height: 8px;
+    background-color: #7a7a7a56;
+    border-radius: 4px;
+}
+
+.progresso {
+    height: 100%;
+    background-color: var(--cor--fundo);
+    border-radius: 4px;
+}
+
+
+@media screen and (min-width: 768px) { 
+    #skill-container {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 }
