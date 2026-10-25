@@ -113,8 +113,13 @@ section#detalhes {
 article {
     background-color:var(--cor-destaque);
     padding: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     border-radius: 5px;
+}
+
+article h2 {
+    margin-bottom: 20px;
+    color: var(--cor--fundo);
 }
 
 #video {
@@ -184,6 +189,38 @@ article {
     height: 100%;
     background-color: var(--cor--icons);
     border-radius: 5px;
+}
+
+#formação-container {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 15px;
+}
+
+#formação-container .curso {
+    background-color: var(--cor--letras);
+    color: var(--cor-destaque);
+    border-radius: 5px;
+    border-left: 10px solid var(--cor-letrainverso);
+    padding: 10px;
+}
+
+#formação-container .curso:hover{
+    border-left-width: 20px;
+    border-color: var(--cor--icons);
+    transition: 0.60s;
+    cursor: pointer;
+}
+
+#formação-container .periodo{
+    font-size:0.8em;
+    font-weight: bold;
+    color: var(--cor--icons);
+}
+
+#formação-container .insti{
+    color: var(--cor-destaque);
+    font-size: 1.1em;
 }
 
 @media screen and (min-width: 780px){
