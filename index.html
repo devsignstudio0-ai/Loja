@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pink moda fitness</title>
+    <title>Almir Neto</title>
     <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="scripts/script.js">
     <link rel="shortcut icon" href="imagens/favicon.png" type="imagepng">
     <script src="https://kit.fontawesome.com/ac925d8129.js" crossorigin="anonymous"></script>
 </head>
@@ -12,18 +13,18 @@
     <header>
         <nav id="menu">
             <ul>
-                <li><a href="#"><i class="fa-solid fa-house"></i></a></li>
-                 <li><a href="#"><i class="fa-solid fa-brain"></i></a></li>
-                <li><a href="#"><i class="fa-solid fa-graduation-cap"></i></a></li>
-                <li><a href="#"><i class="fa-solid fa-diagram-project"></i></a></li>
-                <li><a href="#"><i class="fa-solid fa-moon"></i></a></li>
+                <li><a href="#video" class="link"><i class="fa-solid fa-house"></i></a></li>
+                 <li><a href="#skills" class="link"><i class="fa-solid fa-brain"></i></a></li>
+                <li><a href="#formações" class="link"><i class="fa-solid fa-graduation-cap"></i></a></li>
+                <li><a href="#projetos" class="link"><i class="fa-solid fa-diagram-project"></i></a></li>
+                <li><a href="#" id="botao-tema" ><i class="fa-solid fa-moon"></i></a></li>
             </ul>
         </nav>
     </header>
 
     <main>
        <section id="ficha">
-         <img src="imagens/photo_2026-10-18_10-38-07.jpg" alt="pink" class="foto">
+         <img src="imagens/photo_2026-10-18_10-38-07.jpg" alt="perfil" class="fotoperfil">
             <h1>Almir Neto</h1>
             <p>Sou estudante de Análise e Desenvolvimento de Sistemas (ADS), apaixonado por tecnologia, programação e desenvolvimento web. Estou sempre buscando aprender coisas novas, aprimorar minhas habilidades e transformar ideias em projetos criativos e funcionais.
 
@@ -231,16 +232,76 @@
 
                 </div>
 
-            </article><!--Final da formação-->
+                    </article><!--Final da formação-->
 
-            <article id="skills">
-                <h2><i class="fa-solid fa-diagram-project"></i> Projetos</h2>
+                        <article id="projetos"><!--Inicio do Projetos-->
+                            <h2><i class="fa-solid fa-diagram-project"></i> Projetos</h2>
 
-            </article>
+                            <div id="projeto-container">
+
+                                <div class="projeto"><!--Inicio do projeto01-->
+                                    <img src="imagens/projeto 01.jpg" alt="projeto 01" class="foto">
+                                    <div class="projeto-infor">
+                                        <p class="periodo">
+                                            2026
+                                        </p>
+                                        <h3 class="titulo"> Projeto comercial</h3>
+                                        <p>
+                                            Meu projeto comercial tem como objetivo oferecer produtos e serviços de qualidade, atendendo às necessidades dos clientes com atenção, confiança e bom atendimento.
+                                        </p>
+                                        <details class="descrição">
+                                            <summary>Saiba mais...</summary>
+                                            <p>Voltada à oferta de produtos e serviços que atendam às necessidades do público. Com foco em qualidade, bom atendimento e confiança, busca construir relações duradouras com os clientes e crescer de forma sustentável no mercado.</p>
+                                        </details>
+                                    </div>
+                                </div><!--Final do projeto01-->
+
+                                <div class="projeto"><!--Inicio do projeto02-->
+                                    <img src="imagens/projeto 02.jpg" alt="projeto 02" class="foto">
+                                    <div class="projeto-infor">
+                                        <p class="periodo">
+                                            2025
+                                        </p>
+                                        <h3 class="titulo"> Projeto Logotipo</h3>
+                                        <p>
+                                            Projeto de design voltado à criação de soluções visuais que comuniquem ideias com clareza e personalidade. O trabalho combina criatividade, funcionalidade e atenção aos detalhes para desenvolver uma identidade visual alinhada aos objetivos e às necessidades do cliente.
+                                        </p>
+                                        <details class="descrição">
+                                            <summary>Saiba mais...</summary>
+                                            <p>Este projeto de design busca transformar ideias em soluções visuais criativas, funcionais e alinhadas aos objetivos do cliente, com atenção à identidade, à clareza da comunicação e aos detalhes em cada etapa.</p>
+                                        </details>
+                                    </div>
+                                </div><!--Final do projeto02-->
+
+                                <div class="projeto"><!--Inicio do projeto03-->
+                                    <img src="imagens/projeto 03.jpg" alt="projeto 03" class="foto">
+                                    <div class="projeto-infor">
+                                        <p class="periodo">
+                                            2024
+                                        </p>
+                                        <h3 class="titulo"> Projeto Vendas</h3>
+                                        <p>
+                                           Este projeto de design transforma ideias em soluções visuais criativas e funcionais, alinhadas à identidade e aos objetivos do cliente.
+                                        </p>
+                                        <details class="descrição">
+                                            <summary>Saiba mais...</summary>
+                                            <p>Este projeto de design tem como objetivo transformar ideias em soluções visuais criativas, funcionais e alinhadas aos objetivos do cliente. Cada etapa é desenvolvida com atenção à identidade, ao público e à mensagem que se deseja transmitir, buscando criar materiais claros, atraentes e consistentes. O processo combina pesquisa, planejamento e criatividade para encontrar soluções que valorizem a marca e proporcionem uma comunicação visual marcante.</p>
+                                        </details>
+                                    </div>
+                                </div><!--Final do projeto03-->
+
+                            </div>
+
+                        </article><!--Final do Projetos-->
               
-       </section>
+        </section><!--Inicio do Projetos-->
        
     </main>
+
+    <footer>
+        <p>© 2026 Almir Neto. Todos os direitos reservados.</p>
+        <a href="https://www.cursoemvideo.com" target="_blank" rel="noopener noreferrer"> Curso em Vídeo (Gustavo Guanabara)</a>
+    </footer>
 
 
     <script src="scripts/script.js"></script>
